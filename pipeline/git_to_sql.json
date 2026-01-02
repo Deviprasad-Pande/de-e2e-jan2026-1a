@@ -1,10 +1,12 @@
 {
-	"name": "pipeline1",
+	"name": "git_to_sql",
 	"properties": {
 		"activities": [
 			{
 				"name": "Copy data git to sql",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -204,8 +206,11 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_sqldb_sourcecars",
-						"type": "DatasetReference"
+						"referenceName": "ds_sqldb",
+						"type": "DatasetReference",
+						"parameters": {
+							"table_name": "source_cars_data"
+						}
 					}
 				]
 			}
