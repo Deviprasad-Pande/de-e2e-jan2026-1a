@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "DataFactoryjan2026"
 		},
+		"ls_Adls_accountKey": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "sqlserverjan2026.database.windows.net"
 		},
@@ -14,8 +17,14 @@
 		"AzureSqlDatabase1_properties_typeProperties_userName": {
 			"value": "serveradmin"
 		},
+		"ls_Adls_properties_typeProperties_url": {
+			"value": "https://storageaccountjan2026.dfs.core.windows.net/"
+		},
 		"ls_AzureKeyVault_properties_typeProperties_baseUrl": {
 			"value": "https://keyvaultJan2026.vault.azure.net/"
+		},
+		"ls_git_web_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
 		},
 		"containerUri": {
 			"value": ""
