@@ -57,7 +57,9 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
-							"fileListPath": {
+							"recursive": true,
+							"wildcardFolderPath": "sales",
+							"wildcardFileName": {
 								"value": "@variables('file_name')",
 								"type": "Expression"
 							},
@@ -150,7 +152,11 @@
 					"enableLogging": false,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
-						"fileListPath": "source/sales",
+						"recursive": true,
+						"wildcardFileName": {
+							"value": "@variables('file_name')",
+							"type": "Expression"
+						},
 						"enablePartitionDiscovery": false
 					}
 				}
