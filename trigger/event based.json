@@ -13,7 +13,7 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/source/blobs/",
+			"blobPathBeginsWith": "/source/blobs/sales",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/5d17015c-12a6-4f52-ae49-d962d901aa18/resourceGroups/resourcegroup/providers/Microsoft.Storage/storageAccounts/storageaccountjan2026",
 			"events": [
