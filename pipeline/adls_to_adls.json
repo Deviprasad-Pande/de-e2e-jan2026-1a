@@ -185,7 +185,7 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "ls_sink_sales",
+												"referenceName": "ds_sink_sales",
 												"type": "DatasetReference"
 											}
 										]
