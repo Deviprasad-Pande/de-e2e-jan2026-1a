@@ -1020,7 +1020,7 @@
 				"pipelines": [
 					{
 						"pipelineReference": {
-							"referenceName": "adls_to_adls",
+							"referenceName": "master_sales1",
 							"type": "PipelineReference"
 						},
 						"parameters": {}
@@ -1037,7 +1037,7 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/adls_to_adls')]"
+				"[concat(variables('factoryId'), '/pipelines/master_sales1')]"
 			]
 		},
 		{
@@ -1217,7 +1217,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/master')]",
+			"name": "[concat(parameters('factoryName'), '/master_sales1')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
