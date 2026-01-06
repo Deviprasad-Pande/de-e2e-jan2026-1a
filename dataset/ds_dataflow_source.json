@@ -1,0 +1,53 @@
+{
+	"name": "ds_dataflow_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Adls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "rawdata",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "InvoiceNo",
+				"type": "UTF8"
+			},
+			{
+				"name": "StockCode",
+				"type": "UTF8"
+			},
+			{
+				"name": "Description",
+				"type": "UTF8"
+			},
+			{
+				"name": "Quantity",
+				"type": "UTF8"
+			},
+			{
+				"name": "InvoiceDate",
+				"type": "UTF8"
+			},
+			{
+				"name": "UnitPrice",
+				"type": "UTF8"
+			},
+			{
+				"name": "CustomerID",
+				"type": "UTF8"
+			},
+			{
+				"name": "Country",
+				"type": "UTF8"
+			}
+		]
+	}
+}
