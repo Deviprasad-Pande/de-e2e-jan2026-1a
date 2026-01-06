@@ -34,10 +34,6 @@
 		"ls_git_web_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://raw.githubusercontent.com/"
-		},
-		"event based_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/5d17015c-12a6-4f52-ae49-d962d901aa18/resourceGroups/resourcegroup/providers/Microsoft.Storage/storageAccounts/storageaccountjan2026"
 		}
 	},
 	"variables": {
@@ -1009,36 +1005,6 @@
 				}
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/event based')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "master_sales1",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "BlobEventsTrigger",
-				"typeProperties": {
-					"blobPathBeginsWith": "/source/blobs/sales",
-					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('event based_properties_typeProperties_scope')]",
-					"events": [
-						"Microsoft.Storage.BlobCreated"
-					]
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/master_sales1')]"
-			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_sink_sales')]",

@@ -34,10 +34,6 @@
 		"AzureSqlDatabase1_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "serveradmin"
-		},
-		"event based_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/5d17015c-12a6-4f52-ae49-d962d901aa18/resourceGroups/resourcegroup/providers/Microsoft.Storage/storageAccounts/storageaccountjan2026"
 		}
 	},
 	"variables": {
@@ -1290,36 +1286,6 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/adls_to_adls')]",
 				"[concat(variables('factoryId'), '/pipelines/dataflow')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/event based')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "master_sales1",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "BlobEventsTrigger",
-				"typeProperties": {
-					"blobPathBeginsWith": "/source/blobs/sales",
-					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('event based_properties_typeProperties_scope')]",
-					"events": [
-						"Microsoft.Storage.BlobCreated"
-					]
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/master_sales1')]"
 			]
 		}
 	]

@@ -25,9 +25,6 @@
 		},
 		"ls_git_web_properties_typeProperties_url": {
 			"value": "https://raw.githubusercontent.com/"
-		},
-		"event based_properties_typeProperties_scope": {
-			"value": "/subscriptions/5d17015c-12a6-4f52-ae49-d962d901aa18/resourceGroups/resourcegroup/providers/Microsoft.Storage/storageAccounts/storageaccountjan2026"
 		}
 	}
 }
