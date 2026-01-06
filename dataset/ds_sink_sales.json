@@ -1,5 +1,5 @@
 {
-	"name": "ls_sink_sales",
+	"name": "ds_sink_sales",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_Adls",
